@@ -22,7 +22,7 @@ Antes de começar, certifique-se de ter instalado o seguinte:
 1. Clone este repositório em sua máquina local:
 
 ```bash
-git clone https://github.com/seu-usuario/gerador-de-senhas-react-native.git
+git clone https://github.com/Gabrielygor/appPasswordGenerator.git
 ```
 2. Entre no Diretório:
 
