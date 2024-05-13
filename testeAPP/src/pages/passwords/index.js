@@ -29,7 +29,7 @@ export function Passwords() {
     }
 
     return (
-        <SafeAreaView style={{ felx: 1, }}>
+        <SafeAreaView style={{ }}>
             <View style={styles.header}>
                 <Text style={styles.title}>
                     Minhas Senhas
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
 
     header: {
         backgroundColor: '#074173',
-        paddingTop: 58,
+        paddingTop: 46,
         paddingBottom: 14,
         paddingLeft: 14,
         paddingRight: 14,

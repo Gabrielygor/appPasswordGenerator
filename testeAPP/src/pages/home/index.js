@@ -48,8 +48,8 @@ export function Home() {
                     minimumValue={6}
                     maximumValue={20}
                     maximumTrackTintColor='#000'
-                    minimumTrackTintColor='#5DEBD7'
-                    thumbTintColor='#C5FF95'
+                    minimumTrackTintColor='#fff'
+                    thumbTintColor='#EAD040'
                     value={size}
                     onValueChange={(value) => setSize(value.toFixed(0))}
                 />
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: "#074173"
+        backgroundColor: "#102C57"
     },
 
     logo: {
@@ -86,20 +86,20 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 30,
         fontWeight: 'bold',
-        color: "#C5FF95"
+        color: "#fff"
     },
 
     area: {
         marginTop: 14,
         marginBottom: 14,
         width: "80%",
-        backgroundColor: "#1679AB",
+        backgroundColor: "#0E46A3",
         borderRadius: 12,
         padding: 8
     },
 
     btn: {
-        backgroundColor: '#1679AB',
+        backgroundColor: '#0E46A3',
         width: '45%',
         padding: 16,
         alignItems: 'center',
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     },
 
     btnText: {
-        color: "#C5FF95",
+        color: "#fff",
         fontSize: 20,
     },
 

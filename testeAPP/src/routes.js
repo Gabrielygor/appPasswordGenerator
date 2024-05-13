@@ -10,7 +10,14 @@ const Tab = createBottomTabNavigator();
 export function Routes() {
     return (
 
-        <Tab.Navigator>
+        <Tab.Navigator
+
+            screenOptions={{
+
+                tabBarActiveTintColor: 'black',
+            }}
+
+        >
             <Tab.Screen
                 name="Home"
                 component={Home}
@@ -21,30 +28,40 @@ export function Routes() {
                         if (focused) {
                             return <Ionicons size={size} color={color} name='home' />
                         }
-
                         return <Ionicons size={size} color={color} name='home-outline' />
-                    }
+                    },
+
+                    // tabBarStyle: {
+                    // }
 
                 }}
             />
 
             <Tab.Screen
-                name="Passwords"
+                name="Senhas"
                 component={Passwords}
-                options={{
 
+
+                options={{
                     headerShown: false,
                     tabBarIcon: ({ focused, size, color }) => {
                         if (focused) {
                             return <Ionicons size={size} color={color} name='lock-closed' />
                         }
-                        
                         return <Ionicons size={size} color={color} name='lock-closed-outline' />
 
-                    }
+                    },
+
+                    // tabBarStyle: {
+                    //     backgroundColor: '#DAC0A3',
+                    // }
 
                 }}
             />
+
+
+
+
         </Tab.Navigator>
 
     )
