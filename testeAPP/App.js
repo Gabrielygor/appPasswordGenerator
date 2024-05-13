@@ -1,3 +1,5 @@
+//npx expo start
+
 import { useState } from 'react'
 import { View, Text, StyleSheet, Image, TouchableOpacity, Modal } from 'react-native'
 import Slider from '@react-native-community/slider'
