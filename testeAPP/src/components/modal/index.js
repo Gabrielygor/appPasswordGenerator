@@ -1,7 +1,13 @@
 import { View, Text, StyleSheet, TouchableOpacity, Pressable } from "react-native"
-
+import * as Clipboard from 'expo-clipboard'
 
 export function ModalPassword({ password, handleClose }) {
+
+    async function handleCopyPassword() {
+        await Clipboard.setStringAsync(password)
+        alert("Senha copiada para a área de transferência.")
+    }
+
     return (
         <View style={styles.container}>
 
@@ -10,14 +16,20 @@ export function ModalPassword({ password, handleClose }) {
                     Senha gerada
                 </Text>
 
-                <Pressable style={styles.ineerPassword}>
-                    <Text style={styles.text}> {password} </Text>
+                <Pressable style={styles.ineerPassword} onLongPress={handleCopyPassword}>
+                    <Text style={styles.text}> {password}</Text>
                 </Pressable>
 
                 <View style={styles.btnArea}>
-                    <TouchableOpacity style={styles.btn} onPress={handleClose}> 
+                    <TouchableOpacity style={[styles.btn, styles.btnExit]} onPress={handleClose}>
                         <Text style={styles.btnText}>
                             Voltar
+                        </Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={[styles.btn, styles.btnSave]} onPress={handleClose}>
+                        <Text style={styles.btnText}>
+                            Salvar senha
                         </Text>
                     </TouchableOpacity>
                 </View>
@@ -71,18 +83,32 @@ const styles = StyleSheet.create({
     },
 
     btnArea: {
+        flexDirection: "row",
+        width: "90%",
+        gap: 16,
+        justifyContent: "space-between",
         marginTop: 12,
-        marginBottom: 28
+        marginBottom: 18
     },
 
     btn: {
-        backgroundColor: 'red',
+        flex: 1,
+        alignItems: 'center',
         padding: 16,
         borderRadius: 12
     },
 
+    btnExit: {
+        backgroundColor: 'red',
+    },
+
+    btnSave: {
+        backgroundColor: "green",
+    },
+
     btnText: {
-        color: '#fff'
+        color: '#fff',
+        fontWeight: 'bold'
     }
 
 })
